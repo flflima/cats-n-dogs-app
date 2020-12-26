@@ -12,7 +12,7 @@ cache:
      - ./node_modules
 
 before_script:
-  - npm install -g --silent @angular/cli@11.0.5
+  - npm install -g --silent @angular/cli@latest
 
 install:
   - npm install
