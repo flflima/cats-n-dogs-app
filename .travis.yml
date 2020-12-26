@@ -1,9 +1,8 @@
-dist: trusty
-sudo: true
-
 language: node_js
 node_js:
   - "10"
+dist: trusty
+sudo: required
 
 addons:
   apt:
