@@ -18,6 +18,6 @@ install:
   - npm install
 
 script:
-  - ng test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+  - ng test
   - ng lint
   - ng build
