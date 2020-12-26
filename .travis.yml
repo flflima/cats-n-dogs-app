@@ -5,11 +5,9 @@ dist: trusty
 sudo: required
 
 addons:
-  apt:
-    sources:
-      - google-chrome
-    packages:
-      - google-chrome-stable
+  chrome: stable
+  sonarcloud:
+    organization: "aboudard"
 
 cache:
   directories:
