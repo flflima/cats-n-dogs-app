@@ -10,7 +10,7 @@ describe('CatDogButtonComponent', () => {
   let component: CatDogButtonComponent;
   let fixture: ComponentFixture<CatDogButtonComponent>;
   let loader: HarnessLoader;
-  let buttonHarness = MatButtonHarness;
+  const buttonHarness = MatButtonHarness;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
