@@ -40,7 +40,7 @@ describe('AppComponent', () => {
 
   it('should find all toolbars', async () => {
     const toolbars = await loader.getAllHarnesses(MatToolbarHarness);
-    expect(toolbars.length).toBe(1);
+    expect(toolbars.length).toBe(2);
   });
 
   it(`should find toolbar with text 'Cats And Dogs'`, async () => {
