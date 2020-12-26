@@ -18,6 +18,6 @@ install:
   - npm install
 
 script:
-  - ng test
+  - ng test -- --no-watch --no-progress
   - ng lint
   - ng build
