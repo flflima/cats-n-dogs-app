@@ -6,8 +6,6 @@ sudo: required
 
 addons:
   chrome: stable
-  sonarcloud:
-    organization: "aboudard"
 
 cache:
   directories:
