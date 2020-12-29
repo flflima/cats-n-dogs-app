@@ -1,5 +1,5 @@
-import { CatsAndDogsService } from './cats-and-dogs.service';
-import { CatsAndDogs } from './cats-and-dogs';
+import { CatsAndDogs } from './model/cats-and-dogs';
+import { CatsAndDogsService } from './services/cats-and-dogs.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

@@ -1,5 +1,5 @@
-import { CATS_AND_DOGS } from './mock-cats-and-dogs';
-import { CatsAndDogs } from './cats-and-dogs';
+import { CatsAndDogs } from './../model/cats-and-dogs';
+import { CATS_AND_DOGS } from '../model/mock-cats-and-dogs';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 

@@ -1,7 +1,7 @@
 import { HostListener } from '@angular/core';
 import { Output } from '@angular/core';
 import { Component, OnInit, EventEmitter } from '@angular/core';
-import { CatsAndDogsService } from '../cats-and-dogs.service';
+import { CatsAndDogsService } from '../services/cats-and-dogs.service';
 
 @Component({
   selector: 'app-cat-dog-button',

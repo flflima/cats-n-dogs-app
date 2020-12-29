@@ -1,4 +1,4 @@
-import { CatsAndDogs } from './../cats-and-dogs';
+import { CatsAndDogs } from './../model/cats-and-dogs';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
