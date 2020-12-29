@@ -11,18 +11,29 @@ export class AppComponent implements OnInit {
   title = 'Cats And Dogs';
   catsAndDogs?: CatsAndDogs;
   loading = true;
+  count = 0;
 
-  constructor(private catsAndDogsService: CatsAndDogsService) {}
+  constructor(private catsAndDogsService: CatsAndDogsService) { }
 
   ngOnInit(): void {
     this.getCatsAndDogs();
   }
 
   getCatsAndDogs(): void {
-    this.loading = true;
+    this.enableLoading();
     this.catsAndDogsService.getCatsAndDogs()
-      .subscribe((catsAndDogs) => this.catsAndDogs = catsAndDogs,
-                  (err) => {},
-                  () => this.loading = false);
+      .subscribe((catsAndDogs) => this.catsAndDogs = Object.assign({}, catsAndDogs),
+        () => { },
+        () => {
+          this.disableLoading();
+        });
+  }
+
+  enableLoading(): void {
+    this.loading = true;
+  }
+
+  disableLoading(): void {
+    this.loading = false;
   }
 }

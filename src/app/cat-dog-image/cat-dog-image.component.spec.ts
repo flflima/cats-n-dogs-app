@@ -33,4 +33,61 @@ describe('CatDogImageComponent', () => {
     const cards = await loader.getAllHarnesses(MatCardHarness);
     expect(cards.length).toBe(2);
   });
+
+  it(`should show the 'cat-image' when 'showCatImage' is true`, async () => {
+    // arrange
+    const app = fixture.componentInstance;
+
+    // act
+    app.showCatImage = true;
+    fixture.detectChanges();
+
+    // assert
+    const catImage = fixture.debugElement.nativeElement.querySelector('.cat-image');
+
+    expect(catImage).toBeTruthy();
+  });
+
+  it(`should hide the 'cat-image' when 'showCatImage' is false`, async () => {
+    // arrange
+    const app = fixture.componentInstance;
+
+    // act
+    app.showCatImage = false;
+    fixture.detectChanges();
+
+    // assert
+    const catImage = fixture.debugElement.nativeElement.querySelector('.cat-image');
+
+    expect(catImage).toBeNull();
+  });
+
+  it(`should show the 'dog-image' when 'showDogImage' is true`, async () => {
+    // arrange
+    const app = fixture.componentInstance;
+
+    // act
+    app.showDogImage = true;
+    fixture.detectChanges();
+
+    // assert
+    const dogImage = fixture.debugElement.nativeElement.querySelector('.dog-image');
+
+    expect(dogImage).toBeTruthy();
+  });
+
+  it(`should hide the 'dog-image' when 'showDogImage' is false`, async () => {
+    // arrange
+    const app = fixture.componentInstance;
+
+    // act
+    app.showDogImage = false;
+    fixture.detectChanges();
+
+    // assert
+    const dogImage = fixture.debugElement.nativeElement.querySelector('.dog-image');
+
+    expect(dogImage).toBeNull();
+  });
+
 });

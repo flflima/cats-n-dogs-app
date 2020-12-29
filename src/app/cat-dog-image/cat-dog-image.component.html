@@ -1,16 +1,16 @@
 <div class="container">
-  <div class="column">
+  <div class="column cat-image" *ngIf="showCatImage">
     <mat-card>
       <mat-card-header>
       </mat-card-header>
-      <img mat-card-image class="animal-card" src="{{catsAndDogs?.catImageUrl}}" alt="Cat Photo">
+      <img mat-card-image class="animal-card" src="{{catsAndDogsLoaded?.catImageUrl}}" alt="Cat Photo">
     </mat-card>
   </div>
-  <div class="column">
+  <div class="column dog-image" *ngIf="showDogImage">
     <mat-card>
       <mat-card-header>
       </mat-card-header>
-      <img mat-card-image class="animal-card" src="{{catsAndDogs?.dogImageUrl}}" alt="Dog Photo">
+      <img mat-card-image class="animal-card" src="{{catsAndDogsLoaded?.dogImageUrl}}" alt="Dog Photo">
     </mat-card>
   </div>
 </div>

@@ -12,7 +12,7 @@ export class CatDogButtonComponent implements OnInit {
 
   @Output() updateCatsAndDogsEvent = new EventEmitter<null>();
 
-  constructor(private catsAndDogsService: CatsAndDogsService) { }
+  constructor() { }
 
   ngOnInit(): void { }
 

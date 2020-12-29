@@ -60,12 +60,10 @@ describe('AppComponent', () => {
 
     // assert
     const spinnerComponent = fixture.debugElement.nativeElement.querySelector('#spinner');
-    const dogImage = fixture.debugElement.nativeElement.querySelector('.dog-image');
-    const catImage = fixture.debugElement.nativeElement.querySelector('.cat-image');
+    const imagesComponent = fixture.debugElement.nativeElement.querySelector('.images');
 
     expect(spinnerComponent).toBeTruthy();
-    expect(dogImage).toBeNull();
-    expect(catImage).toBeNull();
+    expect(imagesComponent).toBeNull();
   });
 
   it(`should hide the spinner when 'loading' is false`, async () => {
@@ -78,11 +76,10 @@ describe('AppComponent', () => {
 
     // assert
     const spinnerComponent = fixture.debugElement.nativeElement.querySelector('#spinner');
-    const dogImage = fixture.debugElement.nativeElement.querySelector('.dog-image');
-    const catImage = fixture.debugElement.nativeElement.querySelector('.cat-image');
+    const imagesComponent = fixture.debugElement.nativeElement.querySelector('.images');
+
     expect(spinnerComponent).toBeNull();
-    expect(dogImage).toBeTruthy();
-    expect(catImage).toBeTruthy();
+    expect(imagesComponent).toBeTruthy();
   });
 
 });
