@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { CatsAndDogs } from './../cats-and-dogs';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-cat-dog-image',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CatDogImageComponent implements OnInit {
 
-  constructor() { }
+  @Input() catsAndDogs?: CatsAndDogs
 
   ngOnInit(): void {
   }
