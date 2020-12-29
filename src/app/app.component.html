@@ -1,11 +1,15 @@
 <div class="mat-app-background">
   <mat-toolbar color="primary"><span>{{title}}</span></mat-toolbar>
 
-  <p align="center">
+  <p id="spinner" align="center" *ngIf="loading">
+    <mat-spinner></mat-spinner>
+  </p>
+
+  <p class="dog-image" align="center" *ngIf="!loading">
     <app-cat-dog-image [catsAndDogs]=catsAndDogs></app-cat-dog-image>
   </p>
 
-  <p align="center">
+  <p class="cat-image" align="center" *ngIf="!loading">
     <app-cat-dog-button (updateCatsAndDogsEvent)="getCatsAndDogs()"></app-cat-dog-button>
   </p>
 

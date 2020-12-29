@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'Cats And Dogs';
   catsAndDogs?: CatsAndDogs;
+  loading = true;
 
   constructor(private catsAndDogsService: CatsAndDogsService) {}
 
@@ -18,7 +19,10 @@ export class AppComponent implements OnInit {
   }
 
   getCatsAndDogs(): void {
+    this.loading = true;
     this.catsAndDogsService.getCatsAndDogs()
-      .subscribe(catsAndDogs => this.catsAndDogs = catsAndDogs);
+      .subscribe((catsAndDogs) => this.catsAndDogs = catsAndDogs,
+                  (err) => {},
+                  () => this.loading = false);
   }
 }
