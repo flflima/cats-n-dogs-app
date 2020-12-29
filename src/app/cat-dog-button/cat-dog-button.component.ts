@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { CatsAndDogs } from '../cats-and-dogs';
+import { HostListener } from '@angular/core';
+import { Output } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 import { CatsAndDogsService } from '../cats-and-dogs.service';
 
 @Component({
@@ -8,17 +9,15 @@ import { CatsAndDogsService } from '../cats-and-dogs.service';
   styleUrls: ['./cat-dog-button.component.scss']
 })
 export class CatDogButtonComponent implements OnInit {
-  catsAndDogs?: CatsAndDogs;
+
+  @Output() updateCatsAndDogsEvent = new EventEmitter<null>();
 
   constructor(private catsAndDogsService: CatsAndDogsService) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
-  update(): void {
-    console.log('click');
-    this.catsAndDogsService.getCatsAndDogs()
-      .subscribe(catsAndDogs => this.catsAndDogs = catsAndDogs);
+  updateCatsAndDogs(): void {
+    this.updateCatsAndDogsEvent.emit();
   }
 
 }

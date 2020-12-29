@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CatDogImageComponent implements OnInit {
 
-  @Input() catsAndDogs?: CatsAndDogs
+  @Input() catsAndDogs?: CatsAndDogs;
 
   ngOnInit(): void {
   }

@@ -19,6 +19,6 @@ export class AppComponent implements OnInit {
 
   getCatsAndDogs(): void {
     this.catsAndDogsService.getCatsAndDogs()
-      .subscribe(catsAndDogs => this.catsAndDogs = catsAndDogs);;
+      .subscribe(catsAndDogs => this.catsAndDogs = catsAndDogs);
   }
 }
