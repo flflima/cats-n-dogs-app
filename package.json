@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "NODE_ENV=production node set-env.js && ng build --prod && node server.js",
+    "start": "NODE_ENV=production node set-env.js && npm run build --prod && node server.js",
     "start:dev": "node set-env.js && ng serve",
     "build": "ng build",
     "test": "ng test",
