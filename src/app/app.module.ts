@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { CatDogImageComponent } from './cat-dog-image/cat-dog-image.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CatDogButtonComponent } from './cat-dog-button/cat-dog-button.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { CatDogButtonComponent } from './cat-dog-button/cat-dog-button.component
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatCardModule,
     MatButtonModule,
     MatToolbarModule,

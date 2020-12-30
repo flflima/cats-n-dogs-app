@@ -13,8 +13,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 const envConfigFile = `export const environment = {
-    catsBaseUrl: '${process.env.API_SERVICES_CATS}',
-    dogsBaseUrl: '${process.env.API_SERVICES_DOGS}',
+    catsAndDogsUrl: '${process.env.API_CATS_DOGS_SERVICE}',
     nodeEnv: '${process.env.NODE_ENV}',
     production: ${isProductionEnvironment}
   };

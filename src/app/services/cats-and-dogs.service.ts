@@ -1,7 +1,7 @@
+import { environment } from '../../environments/environment';
 import { CatsAndDogs } from './../model/cats-and-dogs';
-import { CATS_AND_DOGS } from '../model/mock-cats-and-dogs';
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -9,9 +9,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CatsAndDogsService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   getCatsAndDogs(): Observable<CatsAndDogs> {
-    return of(CATS_AND_DOGS);
+    console.log('buscandoo')
+    return this.http.get<CatsAndDogs>(environment.catsAndDogsUrl);
   }
 }

@@ -1,6 +1,5 @@
 export const environment = {
-    catsBaseUrl: 'https://aws.random.cat/meow',
-    dogsBaseUrl: 'https://dog.ceo/api/breeds/image/random',
+    catsAndDogsUrl: 'https://cats-n-dogs-service.herokuapp.com/cats-and-dogs',
     nodeEnv: 'development',
     production: false
   };
