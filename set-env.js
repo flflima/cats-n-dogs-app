@@ -7,7 +7,7 @@ dotenv.config({ path: './config.env' });
 let targetPath = './src/environments/environment.prod.ts';
 let isProductionEnvironment = true;
 
-if (process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === 'production') {
   targetPath = './src/environments/environment.ts';
   isProductionEnvironment = !isProductionEnvironment;
 }
@@ -19,7 +19,7 @@ const envConfigFile = `export const environment = {
   };
 `;
 
-fs.writeFile(targetPath, envConfigFile, (err: any) => {
+fs.writeFile(targetPath, envConfigFile, err => {
   if (err) {
     throw console.error(err);
   } else {

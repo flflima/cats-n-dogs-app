@@ -3,9 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "config": "ts-node set-env.ts",
-    "start": "NODE_ENV=production npm run config && ng build --prod && node server.js",
-    "start:dev": "npm run config && ng serve",
+    "start": "NODE_ENV=production node set-env.js && ng build --prod && node server.js",
+    "start:dev": "node set-env.js && ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -29,8 +28,6 @@
     "path": "^0.12.7",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "ts-node": "~8.3.0",
-    "typescript": "~4.0.2",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
