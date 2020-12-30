@@ -12,7 +12,6 @@ export class CatsAndDogsService {
   constructor(private http: HttpClient) { }
 
   getCatsAndDogs(): Observable<CatsAndDogs> {
-    console.log('buscandoo')
     return this.http.get<CatsAndDogs>(environment.catsAndDogsUrl);
   }
 }
